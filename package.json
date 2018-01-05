@@ -23,8 +23,9 @@
     "url": "https://github.com/fisker/serve-directory-theme-octicons/issues"
   },
   "dependencies": {
-    "octicons": "^7.0.1",
-    "node-sass": "^4.7.2"
+    "file-size": "^1.0.0",
+    "node-sass": "^4.7.2",
+    "octicons": "^7.0.1"
   },
   "scripts": {
     "test": "eslint index.js && ava",

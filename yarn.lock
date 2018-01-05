@@ -269,6 +269,10 @@ fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/fast-json-stable-stringify/download/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
 
+file-size@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/file-size/download/file-size-1.0.0.tgz#3338267d5d206bbf60f4df60c19d7ed3813a4657"
+
 find-up@^1.0.0:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/find-up/download/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"

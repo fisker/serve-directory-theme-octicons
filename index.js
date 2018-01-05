@@ -2,6 +2,7 @@ var path = require('path')
 var fs = require('fs')
 var octicons = require('octicons')
 var nodeSass = require('node-sass')
+var filesize = require('filesize')
 
 var btoa =
   global.btoa ||
@@ -70,7 +71,8 @@ module.exports = {
   imports: {
     DIRECTORY_STYLE: 'file-directory',
     getIconName: getIconName,
-    getCSS: getCSS
+    getCSS: getCSS,
+    filesize: filesize
   },
   process: [
     {

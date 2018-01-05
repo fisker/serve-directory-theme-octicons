@@ -1,0 +1,44 @@
+{
+  "name": "serve-directory-theme-octicons",
+  "version": "1.0.0",
+  "description": "octicons theme for serve-directory.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fisker/serve-directory-theme-octicons.git"
+  },
+  "keywords": [
+    "serve-directory",
+    "theme",
+    "octicons",
+    "serve-directory-theme"
+  ],
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://github.com/fisker"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fisker/serve-directory-theme-octicons/issues"
+  },
+  "dependencies": {
+    "octicons": "^7.0.1",
+    "node-sass": "^4.7.2"
+  },
+  "scripts": {
+    "test": "eslint index.js && ava",
+    "update-dependencies": "yarn upgrade-interactive --latest",
+    "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
+    "release": "release-it && npm run publish-npm"
+  },
+  "readmeFilename": "README.md",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "package.json",
+    "directory.html",
+    "style.scss"
+  ]
+}

@@ -46,19 +46,21 @@ function getIcon(name) {
   }
   var icon = octicons[name]
   icon.options.fill = '#6a737d'
+  icon.options.class = ''
+  icon.options.xmlns = 'http://www.w3.org/2000/svg'
   var svg = icon.toSVG()
   var img = 'data:image/svg+xml;base64,' + btoa(svg)
   // ie can't recognize
   // var img = 'url(data:image/svg+xml;utf8,' + encodeURIComponent(svg)
-  var css = '.file__icon_' + iconName + '{background-image:url(' + img + ')}'
+  var css = '.file__icon_' + name + '{background-image:url(' + img + ')}'
   return (iconCSS[name] = css)
 }
 
 function getCSS(files) {
   return (
     '<style>' +
-    baseStyle +
-    unique(files.map(getIconName)).map(getIcon) +
+    baseStyle.trim() +
+    unique(files.map(getIconName)).map(getIcon).join('') +
     '</style>'
   )
 }

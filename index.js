@@ -46,7 +46,7 @@ function getIcon(name) {
   }
   var icon = octicons[name]
   icon.options.fill = '#6a737d'
-  var svg = octicons.toSVG()
+  var svg = icon.toSVG()
   var img = 'data:image/svg+xml;base64,' + btoa(svg)
   // ie can't recognize
   // var img = 'url(data:image/svg+xml;utf8,' + encodeURIComponent(svg)
@@ -54,11 +54,11 @@ function getIcon(name) {
   return (iconCSS[name] = css)
 }
 
-function getCSS(data) {
+function getCSS(files) {
   return (
     '<style>' +
     baseStyle +
-    unique(data.files.map(getIconName)).map(getIcon) +
+    unique(files.map(getIconName)).map(getIcon) +
     '</style>'
   )
 }
@@ -77,7 +77,7 @@ module.exports = {
   process: [
     {
       accept: 'text/html',
-      template: template
+      render: template
     }
   ]
 }

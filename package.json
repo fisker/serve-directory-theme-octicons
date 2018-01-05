@@ -23,7 +23,7 @@
     "url": "https://github.com/fisker/serve-directory-theme-octicons/issues"
   },
   "dependencies": {
-    "file-size": "^1.0.0",
+    "filesize": "^3.5.11",
     "node-sass": "^4.7.2",
     "octicons": "^7.0.1"
   },

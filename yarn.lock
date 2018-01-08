@@ -115,6 +115,10 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+btoa@^1.1.2:
+  version "1.1.2"
+  resolved "http://registry.npm.taobao.org/btoa/download/btoa-1.1.2.tgz#3e40b81663f81d2dd6596a4cb714a8dc16cfabe0"
+
 builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/builtin-modules/download/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
@@ -268,14 +272,6 @@ fast-deep-equal@^1.0.0:
 fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/fast-json-stable-stringify/download/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
-
-file-size@^1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/file-size/download/file-size-1.0.0.tgz#3338267d5d206bbf60f4df60c19d7ed3813a4657"
-
-filesize@^3.5.11:
-  version "3.5.11"
-  resolved "http://registry.npm.taobao.org/filesize/download/filesize-3.5.11.tgz#1919326749433bb3cf77368bd158caabcc19e9ee"
 
 find-up@^1.0.0:
   version "1.1.2"
@@ -610,6 +606,10 @@ lodash.mergewith@^4.6.0:
   version "4.6.0"
   resolved "http://registry.npm.taobao.org/lodash.mergewith/download/lodash.mergewith-4.6.0.tgz#150cf0a16791f5903b8891eab154609274bdea55"
 
+lodash.uniq@^4.5.0:
+  version "4.5.0"
+  resolved "http://registry.npm.taobao.org/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
+
 lodash@^4.0.0, lodash@~4.17.4:
   version "4.17.4"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
@@ -833,6 +833,10 @@ pinkie-promise@^2.0.0:
 pinkie@^2.0.0:
   version "2.0.4"
   resolved "http://registry.npm.taobao.org/pinkie/download/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
+
+pretty-bytes@^4.0.2:
+  version "4.0.2"
+  resolved "http://registry.npm.taobao.org/pretty-bytes/download/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
 
 process-nextick-args@~1.0.6:
   version "1.0.7"

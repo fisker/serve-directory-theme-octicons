@@ -23,9 +23,11 @@
     "url": "https://github.com/fisker/serve-directory-theme-octicons/issues"
   },
   "dependencies": {
-    "filesize": "^3.5.11"
+    "lodash.uniq": "^4.5.0",
+    "pretty-bytes": "^4.0.2"
   },
   "devDependencies": {
+    "btoa": "^1.1.2",
     "node-sass": "^4.7.2",
     "octicons": "^7.0.1"
   },
@@ -34,7 +36,10 @@
     "build": "cd scripts && sh build.sh",
     "update-dependencies": "yarn upgrade-interactive --latest",
     "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
-    "release": "npm rum build && release-it && npm run publish-npm"
+    "release": "npm rum build && np"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "readmeFilename": "README.md",
   "files": [

@@ -2,33 +2,25 @@ var fs = require('fs')
 var nodeSass = require('node-sass')
 var octicons = require('octicons')
 
-var btoa =
-  global.btoa ||
-  function(str) {
-    return new Buffer(str).toString('base64')
-  }
+var btoa = global.btoa || require('btoa')
 
 var baseStyle = nodeSass
   .renderSync({
-    file: '../style.scss',
+    file: '../src/style.scss',
     outputStyle: 'compressed'
   })
   .css.toString()
   .trim()
 
-var icons = ['file-directory', 'file-media', 'file']
-
-function getIconName(file) {
-  if (file.isDirectory()) {
-    return 'file-directory'
-  }
-
-  if (/^(?:image|video|audio)\/*/.test(file.type)) {
-    return 'file-media'
-  }
-
-  return 'file'
-}
+var icons = [
+  'file-directory',
+  'file-media',
+  'file-pdf',
+  'file-zip',
+  'markdown',
+  'file-symlink-file',
+  'file'
+  ]
 
 var template = fs
   .readFileSync('../src/directory.html', 'utf-8')

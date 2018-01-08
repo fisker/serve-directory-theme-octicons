@@ -1,6 +1,5 @@
-
 var filesize = require('filesize')
-var asserts = require('asserts.json')
+var asserts = require('./asserts.json')
 
 function unique(array) {
   return Array.from(new Set(array))
@@ -31,8 +30,8 @@ function getIconName(file) {
 }
 
 function getCSS(files) {
-  return
-  '<style>' +
+  return (
+    '<style>' +
     asserts.css +
     unique(files.map(getIconName))
       .map(function(icon) {
@@ -40,6 +39,7 @@ function getCSS(files) {
       })
       .join('') +
     '</style>'
+  )
 }
 
 module.exports = {

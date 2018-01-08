@@ -1,6 +1,6 @@
 {
   "name": "serve-directory-theme-octicons",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "octicons theme for serve-directory.",
   "main": "index.js",
   "repository": {
@@ -23,15 +23,18 @@
     "url": "https://github.com/fisker/serve-directory-theme-octicons/issues"
   },
   "dependencies": {
-    "filesize": "^3.5.11",
+    "filesize": "^3.5.11"
+  },
+  "devDependencies": {
     "node-sass": "^4.7.2",
     "octicons": "^7.0.1"
   },
   "scripts": {
     "test": "eslint index.js && ava",
+    "build": "cd scripts && sh build.sh",
     "update-dependencies": "yarn upgrade-interactive --latest",
     "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
-    "release": "release-it && npm run publish-npm"
+    "release": "npm rum build && release-it && npm run publish-npm"
   },
   "readmeFilename": "README.md",
   "files": [
@@ -39,7 +42,7 @@
     "README.md",
     "index.js",
     "package.json",
-    "directory.html",
-    "style.scss"
+    "dist/index.js",
+    "dist/asserts.json"
   ]
 }

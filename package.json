@@ -32,7 +32,7 @@
     "octicons": "^7.0.1"
   },
   "scripts": {
-    "test": "eslint index.js && ava",
+    "test": "ava",
     "build": "cd scripts && sh build.sh",
     "update-dependencies": "yarn upgrade-interactive --latest",
     "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",

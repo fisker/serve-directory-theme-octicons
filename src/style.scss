@@ -5,6 +5,12 @@ $color-hover: #f6f8fa;
 $color-link: #0366d6;
 $color-striped: #f2f2f2;
 
+@mixin mobile() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
 body {
   background: #fff;
   color: $color-base;
@@ -60,10 +66,8 @@ a {
 
   &__icon {
     width: 16px;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-position: center 9px;
     padding-right: 2px;
+    text-align: center;
   }
 
   &__name {
@@ -76,6 +80,18 @@ a {
     white-space: nowrap;
   }
 
+  @include mobile() {
+    &__size,
+    &__mtime {
+      display: none;
+    }
+
+    &__link {
+      display: block;
+    }
+  }
+
+
   &__mtime {
     width: 150px;
     text-align: right;
@@ -83,14 +99,10 @@ a {
   }
 }
 
-@media (max-width: 768px) {
-  .file__size,
-  .file__mtime {
-    display: none;
-  }
-
-  .file__link {
-    display: block;
-  }
+.file-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-

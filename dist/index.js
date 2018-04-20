@@ -1,13 +1,19 @@
+'use strict'
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+})
 var prettyBytes = require('pretty-bytes')
 var uniq = require('lodash.uniq')
 var asserts = require('./asserts.json')
+var RE_MEDIA = /^(?:image|video|audio)\/*/
 
 function getIconName(file) {
   if (file.isDirectory()) {
     return 'file-directory'
   }
 
-  if (/^(?:image|video|audio)\/*/.test(file.type)) {
+  if (RE_MEDIA.test(file.type)) {
     return 'file-media'
   }
 
@@ -30,20 +36,23 @@ function getIconName(file) {
   return 'file'
 }
 
-function getCSS(files) {
+function iconToCSS(icon) {
   return (
-    '<style>' +
-    asserts.css +
-    uniq(files.map(getIconName))
-      .map(function(icon) {
-        return asserts.icons[icon]
-      })
-      .join('') +
-    '</style>'
+    '.file-icon_' + icon + '{background-image:url(' + asserts.icons[icon] + ')}'
   )
 }
 
-module.exports = {
+function getCSS(files) {
+  var style = ''
+  style += asserts.css
+  style += uniq(files.map(getIconName))
+    .map(iconToCSS)
+    .join('')
+
+  return '<style>' + style + '</style>'
+}
+
+exports.default = {
   imports: {
     DIRECTORY_STYLE: 'file-directory',
     getIconName: getIconName,
@@ -57,3 +66,4 @@ module.exports = {
     }
   ]
 }
+module.exports = exports['default']

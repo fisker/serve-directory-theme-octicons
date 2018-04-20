@@ -1,13 +1,14 @@
-var prettyBytes = require('pretty-bytes')
-var uniq = require('lodash.uniq')
-var asserts = require('./asserts.json')
+const prettyBytes = require('pretty-bytes')
+const uniq = require('lodash.uniq')
+const asserts = require('./asserts.json')
+const RE_MEDIA = /^(?:image|video|audio)\/*/
 
 function getIconName(file) {
   if (file.isDirectory()) {
     return 'file-directory'
   }
 
-  if (/^(?:image|video|audio)\/*/.test(file.type)) {
+  if (RE_MEDIA.test(file.type)) {
     return 'file-media'
   }
 
@@ -30,20 +31,21 @@ function getIconName(file) {
   return 'file'
 }
 
-function getCSS(files) {
-  return (
-    '<style>' +
-    asserts.css +
-    uniq(files.map(getIconName))
-      .map(function(icon) {
-        return asserts.icons[icon]
-      })
-      .join('') +
-    '</style>'
-  )
+function iconToCSS(icon) {
+  return `.file-icon_${icon}{background-image:url(${asserts.icons[icon]})}`
 }
 
-module.exports = {
+function getCSS(files) {
+  let style = ''
+  style += asserts.css
+  style += uniq(files.map(getIconName))
+    .map(iconToCSS)
+    .join('')
+
+  return `<style>${style}</style>`
+}
+
+export default {
   imports: {
     DIRECTORY_STYLE: 'file-directory',
     getIconName: getIconName,

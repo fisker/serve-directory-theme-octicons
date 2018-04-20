@@ -4,6 +4,9 @@ $color-muted: #6a737d;
 $color-hover: #f6f8fa;
 $color-link: #0366d6;
 $color-striped: #f2f2f2;
+$font-size: 14px;
+$line-height: 1.5;
+$icon-size: ($font-size * $line-height);
 
 @mixin mobile() {
   @media (max-width: 768px) {
@@ -14,8 +17,8 @@ $color-striped: #f2f2f2;
 body {
   background: #fff;
   color: $color-base;
-  line-height: 1.5;
-  font-size: 14px;
+  line-height: $line-height;
+  font-size: $font-size;
   word-break: break-all;
   word-wrap: break-word;
 }
@@ -65,7 +68,7 @@ a {
   }
 
   &__icon {
-    width: 16px;
+    width: $icon-size;
     padding-right: 2px;
     text-align: center;
   }
@@ -101,8 +104,8 @@ a {
 
 .file-icon {
   display: block;
-  width: 21px;
-  height: 21px;
+  width: $icon-size;
+  height: $icon-size;
   background-repeat: no-repeat;
   background-position: center center;
 }

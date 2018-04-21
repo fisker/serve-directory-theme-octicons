@@ -3,26 +3,40 @@
 Object.defineProperty(exports, '__esModule', {
   value: true
 })
-var prettyBytes = require('pretty-bytes')
-var uniq = require('lodash.uniq')
-var asserts = require('./asserts.json')
+
+var _prettyBytes = require('pretty-bytes')
+
+var _prettyBytes2 = _interopRequireDefault(_prettyBytes)
+
+var _lodash = require('lodash.uniq')
+
+var _lodash2 = _interopRequireDefault(_lodash)
+
+var _asserts = require('./asserts.json')
+
+var _asserts2 = _interopRequireDefault(_asserts)
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {default: obj}
+}
+
 var RE_MEDIA = /^(?:image|video|audio)\/*/
 
 function getIconName(file) {
   if (file.isDirectory()) {
-    return 'file-directory'
+    return 'directory'
   }
 
   if (RE_MEDIA.test(file.type)) {
-    return 'file-media'
+    return 'media'
   }
 
   if (file.ext === '.pdf') {
-    return 'file-pdf'
+    return 'pdf'
   }
 
   if (file.ext === '.zip') {
-    return 'file-zip'
+    return 'zip'
   }
 
   if (file.ext === '.markdown' || file.ext === '.md') {
@@ -30,7 +44,7 @@ function getIconName(file) {
   }
 
   if (file.ext === '.lnk') {
-    return 'file-symlink-file'
+    return 'symlink'
   }
 
   return 'file'
@@ -38,14 +52,18 @@ function getIconName(file) {
 
 function iconToCSS(icon) {
   return (
-    '.file-icon_' + icon + '{background-image:url(' + asserts.icons[icon] + ')}'
+    '.file-icon_type_' +
+    icon +
+    '{background-image:url(' +
+    _asserts2.default.icons[icon] +
+    ')}'
   )
 }
 
 function getCSS(files) {
   var style = ''
-  style += asserts.css
-  style += uniq(files.map(getIconName))
+  style += _asserts2.default.css
+  style += (0, _lodash2.default)(files.map(getIconName))
     .map(iconToCSS)
     .join('')
 
@@ -54,15 +72,14 @@ function getCSS(files) {
 
 exports.default = {
   imports: {
-    DIRECTORY_STYLE: 'file-directory',
     getIconName: getIconName,
     getCSS: getCSS,
-    prettyBytes: prettyBytes
+    prettyBytes: _prettyBytes2.default
   },
   process: [
     {
       accept: 'text/html',
-      render: asserts.template
+      render: _asserts2.default.template
     }
   ]
 }

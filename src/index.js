@@ -1,23 +1,26 @@
-const prettyBytes = require('pretty-bytes')
-const uniq = require('lodash.uniq')
-const asserts = require('./asserts.json')
+'use strict'
+
+import prettyBytes from 'pretty-bytes'
+import uniq from 'lodash.uniq'
+import asserts from './asserts.json'
+
 const RE_MEDIA = /^(?:image|video|audio)\/*/
 
 function getIconName(file) {
   if (file.isDirectory()) {
-    return 'file-directory'
+    return 'directory'
   }
 
   if (RE_MEDIA.test(file.type)) {
-    return 'file-media'
+    return 'media'
   }
 
   if (file.ext === '.pdf') {
-    return 'file-pdf'
+    return 'pdf'
   }
 
   if (file.ext === '.zip') {
-    return 'file-zip'
+    return 'zip'
   }
 
   if (file.ext === '.markdown' || file.ext === '.md') {
@@ -25,14 +28,14 @@ function getIconName(file) {
   }
 
   if (file.ext === '.lnk') {
-    return 'file-symlink-file'
+    return 'symlink'
   }
 
   return 'file'
 }
 
 function iconToCSS(icon) {
-  return `.file-icon_${icon}{background-image:url(${asserts.icons[icon]})}`
+  return `.file-icon_type_${icon}{background-image:url(${asserts.icons[icon]})}`
 }
 
 function getCSS(files) {
@@ -47,7 +50,6 @@ function getCSS(files) {
 
 export default {
   imports: {
-    DIRECTORY_STYLE: 'file-directory',
     getIconName: getIconName,
     getCSS: getCSS,
     prettyBytes: prettyBytes

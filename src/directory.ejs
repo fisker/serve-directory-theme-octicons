@@ -31,7 +31,7 @@
           %>
             <tr class="files__item file">
               <td class="file__icon">
-                <i class="file-icon file-icon_<%= DIRECTORY_STYLE %>"></i>
+                <i class="file-icon file-icon_type_<%= getIconName(file) %>"></i>
               </td>
               <td class="file__name"><a class="file__link" href="<%= encodeURIComponent(file.name) %>/" title="<%- file.name%>"><%- file.name %></a></td>
               <td class="file__size"></td>
@@ -42,7 +42,7 @@
           %>
             <tr class="files__item file">
               <td class="file__icon">
-                <i class="file-icon file-icon_<%= getIconName(file) %>"></i>
+                <i class="file-icon file-icon_type_<%= getIconName(file) %>"></i>
               </td>
               <td class="file__name"><a class="file__link" href="<%= encodeURIComponent(file.name) %>" title="<%- file.name %>"><%- file.name %></a></td>
               <td class="file__size"><%= prettyBytes(file.size) %></td>

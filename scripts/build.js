@@ -17,16 +17,6 @@ const baseStyle = nodeSass
   .css.toString()
   .trim()
 
-const icons = [
-  'file-directory',
-  'file-media',
-  'file-pdf',
-  'file-zip',
-  'markdown',
-  'file-symlink-file',
-  'file'
-  ]
-
 const template = fs
   .readFileSync('../src/directory.ejs', 'utf-8')
   .replace(/>\s*</g, '><')
@@ -34,7 +24,15 @@ const template = fs
 const asserts = {
   css: baseStyle,
   template: template,
-  icons: {}
+  icons: {
+    directory: 'file-directory',
+    media: 'file-media',
+    pdf: 'file-pdf',
+    zip: 'file-zip',
+    markdown: 'markdown',
+    symlink: 'file-symlink-file',
+    file: 'file'
+  }
 }
 
 function getIcon(name) {
@@ -45,12 +43,12 @@ function getIcon(name) {
   }).replace(' class=""', '')
   const img = 'data:image/svg+xml;base64,' + btoa(svg)
   // ie can't recognize
-  // const img = 'url(data:image/svg+xml;utf8,' + encodeURIComponent(svg)
+  // const img = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg)
   return img
 }
 
-icons.forEach(function(icon) {
-  asserts.icons[icon] = getIcon(icon)
+Object.keys(asserts.icons).forEach(function(type) {
+  asserts.icons[type] = getIcon(asserts.icons[type])
 })
 
 fs.writeFileSync('../dist/asserts.json', JSON.stringify(asserts, null, 2))

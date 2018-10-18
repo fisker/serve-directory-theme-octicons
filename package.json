@@ -41,7 +41,7 @@
     "build": "cd scripts && sh build.sh",
     "update-dependencies": "yarn upgrade-interactive --latest",
     "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
-    "release": "npm rum build && np --yolo"
+    "release": "npm rum build && np --yolo --no-yarn"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

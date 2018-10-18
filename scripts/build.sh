@@ -1,3 +1,3 @@
-rm -rf ../dist
-mkdir ../dist
+rm -rf ../lib
+mkdir ../lib
 node build.js

@@ -27,14 +27,15 @@
     "pretty-bytes": "^4.0.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1",
-    "btoa": "^1.2.1",
     "json-stable-stringify": "^1.0.1",
     "node-sass": "^4.8.3",
     "octicons": "^7.2.0",
-    "prettier": "^1.12.1"
+    "mini-svg-data-uri": "^1.0.1",
+    "prettier": "^1.12.1",
+    "svgo": "^1.1.1"
   },
   "scripts": {
     "build": "cd scripts && sh build.sh",
@@ -51,7 +52,7 @@
     "README.md",
     "index.js",
     "package.json",
-    "dist/index.js",
-    "dist/asserts.json"
+    "lib/index.js",
+    "lib/asserts.json"
   ]
 }

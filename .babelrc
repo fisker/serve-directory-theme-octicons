@@ -1,8 +1,8 @@
 {
-  "plugins": "add-module-exports",
+  "plugins": ["add-module-exports"],
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "targets": {
           "node": "0.8"

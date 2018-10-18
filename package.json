@@ -31,9 +31,9 @@
     "@babel/preset-env": "^7.1.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "json-stable-stringify": "^1.0.1",
+    "mini-svg-data-uri": "^1.0.1",
     "node-sass": "^4.8.3",
     "octicons": "^7.2.0",
-    "mini-svg-data-uri": "^1.0.1",
     "prettier": "^1.12.1",
     "svgo": "^1.1.1"
   },
@@ -41,7 +41,7 @@
     "build": "cd scripts && sh build.sh",
     "update-dependencies": "yarn upgrade-interactive --latest",
     "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
-    "release": "npm rum build && np"
+    "release": "npm rum build && np --yolo"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

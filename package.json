@@ -24,16 +24,16 @@
   },
   "dependencies": {
     "lodash.uniq": "^4.5.0",
-    "pretty-bytes": "^4.0.2"
+    "pretty-bytes": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "json-stable-stringify": "^1.0.1",
     "mini-svg-data-uri": "^1.0.1",
     "node-sass": "^4.8.3",
-    "octicons": "^7.2.0",
+    "octicons": "^8.3.0",
     "prettier": "^1.12.1",
     "svgo": "^1.1.1"
   },

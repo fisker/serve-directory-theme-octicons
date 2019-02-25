@@ -1,5 +1,3 @@
-'use strict'
-
 import prettyBytes from 'pretty-bytes'
 import uniq from 'lodash.uniq'
 import asserts from './asserts.json'
@@ -35,7 +33,9 @@ function getIconName(file) {
 }
 
 function iconToCSS(icon) {
-  return `.file-icon_type_${icon}{background-image:url("${asserts.icons[icon]}")}`
+  return `.file-icon_type_${icon}{background-image:url("${
+    asserts.icons[icon]
+  }")}`
 }
 
 function getCSS(files) {
@@ -50,14 +50,14 @@ function getCSS(files) {
 
 export default {
   imports: {
-    getIconName: getIconName,
-    getCSS: getCSS,
-    prettyBytes: prettyBytes
+    getIconName,
+    getCSS,
+    prettyBytes,
   },
   process: [
     {
       accept: 'text/html',
-      render: asserts.template
-    }
-  ]
+      render: asserts.template,
+    },
+  ],
 }

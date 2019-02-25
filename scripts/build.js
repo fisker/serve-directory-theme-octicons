@@ -15,7 +15,7 @@ const svgo = new SVGO()
 const baseStyle = nodeSass
   .renderSync({
     file: '../src/style.scss',
-    outputStyle: 'compressed'
+    outputStyle: 'compressed',
   })
   .css.toString()
   .trim()
@@ -26,7 +26,7 @@ const template = fs
 
 const asserts = {
   css: baseStyle,
-  template: template,
+  template,
   icons: {
     directory: 'file-directory',
     media: 'file-media',
@@ -34,34 +34,37 @@ const asserts = {
     zip: 'file-zip',
     markdown: 'markdown',
     symlink: 'file-symlink-file',
-    file: 'file'
-  }
+    file: 'file',
+  },
 }
 
 function getIcon(icon) {
   return svgo.optimize(icon.content).then(function(result) {
     let uri = svgToMiniDataURI(result.data)
-    uri = uri.replace('data:image/svg+xml,', 'data:image/svg+xml;charset=utf-8,')
+    uri = uri.replace(
+      'data:image/svg+xml,',
+      'data:image/svg+xml;charset=utf-8,'
+    )
     return {
       ...icon,
-      uri
+      uri,
     }
   })
 }
 
 function getIcons() {
   const icons = Object.keys(asserts.icons).map(name => {
-    let octiconName = asserts.icons[name]
-    let content = octicons[octiconName].toSVG({
+    const octiconName = asserts.icons[name]
+    const content = octicons[octiconName].toSVG({
       fill: '#6a737d',
       class: '',
       'aria-hidden': '',
-      xmlns: 'http://www.w3.org/2000/svg'
+      xmlns: 'http://www.w3.org/2000/svg',
     })
 
     return {
       name,
-      content
+      content,
     }
   })
 

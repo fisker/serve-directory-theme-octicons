@@ -33,7 +33,7 @@ a {
   color: $color-link;
   text-decoration: none;
   -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
 
   &:hover {
     text-decoration: underline;

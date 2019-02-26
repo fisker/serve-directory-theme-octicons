@@ -1,6 +1,6 @@
 {
   "name": "serve-directory-theme-octicons",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "octicons theme for serve-directory.",
   "main": "index.js",
   "repository": {

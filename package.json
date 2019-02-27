@@ -37,7 +37,7 @@
     "mini-svg-data-uri": "1.0.2",
     "node-sass": "4.11.0",
     "np": "^4.0.2",
-    "octicons": "8.4.2",
+    "octicons": "8.5.0",
     "prettier": "1.16.4",
     "svgo": "1.2.0"
   },

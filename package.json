@@ -34,7 +34,7 @@
     "json-stable-stringify": "1.0.1",
     "lint-staged": "8.1.5",
     "markdownlint-cli": "^0.14.0",
-    "mini-svg-data-uri": "1.0.2",
+    "mini-svg-data-uri": "1.0.3",
     "node-sass": "4.11.0",
     "np": "^4.0.2",
     "octicons": "8.5.0",

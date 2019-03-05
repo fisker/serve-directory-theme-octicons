@@ -26,7 +26,7 @@
     "@babel/preset-env": "7.3.4",
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
-    "@xwtec/eslint-config": "3.5.13",
+    "@xwtec/eslint-config": "3.7.0",
     "babel-plugin-add-module-exports": "1.0.0",
     "cz-conventional-changelog-emoji": "0.1.0",
     "eslint": "5.15.0",

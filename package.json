@@ -11,7 +11,7 @@
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
-    "url": "https://github.com/fisker"
+    "url": "https://www.fiskercheung.com/"
   },
   "license": "MIT",
   "bugs": {
@@ -26,10 +26,10 @@
     "@babel/preset-env": "7.4.2",
     "@commitlint/cli": "7.5.2",
     "@commitlint/config-conventional": "7.5.0",
-    "@xwtec/eslint-config": "5.0.3",
     "babel-plugin-add-module-exports": "1.0.0",
     "cz-conventional-changelog-emoji": "0.1.0",
     "eslint": "5.15.3",
+    "eslint-config-fisker": "^4.1.0",
     "husky": "1.3.1",
     "json-stable-stringify": "1.0.1",
     "lint-staged": "8.1.5",
@@ -39,6 +39,8 @@
     "np": "^4.0.2",
     "octicons": "8.5.0",
     "prettier": "1.16.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-fisker": "^0.0.4",
     "svgo": "1.2.0"
   },
   "scripts": {
@@ -51,19 +53,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "readmeFilename": "README.md",
-  "files": [
-    "LICENSE",
-    "README.md",
-    "index.js",
-    "package.json",
-    "lib/index.js",
-    "lib/asserts.json"
-  ],
+  "files": ["index.js", "lib/index.js", "lib/asserts.json"],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog-emoji"
     }
   },
-  "readme": "ERROR: No README data found!",
   "homepage": "https://github.com/fisker/serve-directory-theme-octicons#readme"
 }

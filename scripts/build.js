@@ -6,10 +6,12 @@ const octicons = require('octicons')
 const babel = require('@babel/core')
 const prettier = require('prettier')
 const stringify = require('json-stable-stringify')
+
 const babelConfig = JSON.parse(fs.readFileSync('../.babelrc', CHARSET))
 
 const SVGO = require('svgo')
 const svgToMiniDataURI = require('mini-svg-data-uri')
+
 const svgo = new SVGO()
 
 const baseStyle = nodeSass

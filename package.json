@@ -41,7 +41,7 @@
     "prettier": "1.16.4",
     "stylelint": "^9.10.1",
     "stylelint-config-fisker": "^0.0.4",
-    "svgo": "1.2.0"
+    "svgo": "1.2.1"
   },
   "scripts": {
     "build": "cd scripts && sh build.sh",

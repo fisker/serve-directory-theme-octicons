@@ -38,7 +38,7 @@
     "node-sass": "4.11.0",
     "np": "^4.0.2",
     "octicons": "8.5.0",
-    "prettier": "1.16.4",
+    "prettier": "1.17.0",
     "stylelint": "^9.10.1",
     "stylelint-config-fisker": "^0.0.4",
     "svgo": "1.2.1"

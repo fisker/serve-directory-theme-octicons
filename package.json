@@ -40,7 +40,7 @@
     "octicons": "8.5.0",
     "prettier": "1.17.0",
     "stylelint": "^10.0.0",
-    "stylelint-config-fisker": "^0.0.4",
+    "stylelint-config-fisker": "^0.0.5",
     "svgo": "1.2.1"
   },
   "scripts": {

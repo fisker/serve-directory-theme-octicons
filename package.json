@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "lodash.uniq": "^4.5.0",
-    "pretty-bytes": "^5.1.0"
+    "pretty-bytes": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",

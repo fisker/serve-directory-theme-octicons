@@ -36,7 +36,7 @@
     "markdownlint-cli": "^0.15.0",
     "mini-svg-data-uri": "1.0.3",
     "node-sass": "4.11.0",
-    "np": "^5.0.0",
+    "np": "^5.0.1",
     "octicons": "8.5.0",
     "prettier": "1.17.0",
     "stylelint": "^10.0.1",

@@ -5,8 +5,8 @@
  * document: https://stylelint.io/user-guide/configuration/
  */
 
-/* eslint-config-fisker https://git.io/fjJPX */
+/* @fisker/stylelint-config https://git.io/fjOe9 */
 
 module.exports = {
-  extends: ['stylelint-config-fisker'],
+  extends: ['@fisker/stylelint-config'],
 }

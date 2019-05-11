@@ -2,12 +2,17 @@
   "name": "serve-directory-theme-octicons",
   "version": "1.2.3",
   "description": "octicons theme for serve-directory.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fisker/serve-directory-theme-octicons.git"
   },
-  "keywords": ["serve-directory", "theme", "octicons", "serve-directory-theme"],
+  "keywords": [
+    "serve-directory",
+    "theme",
+    "octicons",
+    "serve-directory-theme"
+  ],
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
@@ -25,39 +30,49 @@
     "@babel/core": "7.4.4",
     "@babel/preset-env": "7.4.4",
     "@commitlint/cli": "7.6.1",
-    "@commitlint/config-conventional": "7.6.0",
+    "@fisker/commitlint-config": "^1.0.8",
+    "@fisker/eslint-config": "^1.0.11",
+    "@fisker/husky-config": "^1.1.0",
+    "@fisker/lint-staged-config": "^1.0.4",
+    "@fisker/prettier-config": "^1.0.17",
+    "@fisker/stylelint-config": "^1.0.6",
     "babel-plugin-add-module-exports": "1.0.2",
     "cz-conventional-changelog-emoji": "0.1.0",
     "eslint": "5.16.0",
-    "eslint-config-fisker": "^4.5.0",
     "husky": "2.2.0",
     "json-stable-stringify": "1.0.1",
     "lint-staged": "8.1.6",
     "markdownlint-cli": "^0.15.0",
     "mini-svg-data-uri": "1.0.3",
     "node-sass": "4.12.0",
-    "np": "^5.0.1",
     "octicons": "8.5.0",
     "prettier": "1.17.0",
     "stylelint": "^10.0.1",
-    "stylelint-config-fisker": "^0.0.5",
     "svgo": "1.2.2"
   },
   "scripts": {
     "build": "cd scripts && sh build.sh",
-    "update-dependencies": "yarn upgrade-interactive --latest",
-    "publish-npm": "npm --registry=https://registry.npmjs.org/ publish",
-    "release": "npm rum build && np --yolo --no-yarn"
+    "release": "run-s lint build prettier dist",
+    "lint": "run-p lint:*",
+    "lint:style": "stylelint **/*.{css,scss,less} --fix",
+    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
+    "dist": "run-p dist:*",
+    "dist:npm": "np --yolo --no-yarn",
+    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
-  "readmeFilename": "README.md",
-  "files": ["index.js", "lib/index.js", "lib/asserts.json"],
+  "files": [
+    "lib"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog-emoji"
     }
   },
-  "homepage": "https://github.com/fisker/serve-directory-theme-octicons#readme"
+  "homepage": "https://github.com/fisker/serve-directory-theme-octicons#readme",
+  "sideEffects": false
 }

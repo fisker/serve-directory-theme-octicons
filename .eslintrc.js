@@ -5,14 +5,16 @@
  * document: https://eslint.org/docs/user-guide/configuring
  */
 
-/* eslint-config-fisker https://git.io/fjJKy */
+/* @fisker/eslint-config https://git.io/fjOeH */
 
 module.exports = {
   root: true,
+  env: {},
   parserOptions: {},
-  extends: ['fisker'],
+  extends: ['@fisker'],
   settings: {},
   rules: {},
   plugins: [],
+  globals: {},
   overrides: [],
 }

@@ -41,7 +41,7 @@
     "eslint": "5.16.0",
     "husky": "2.3.0",
     "json-stable-stringify": "1.0.1",
-    "lint-staged": "8.1.6",
+    "lint-staged": "8.1.7",
     "markdownlint-cli": "^0.16.0",
     "mini-svg-data-uri": "1.0.3",
     "node-sass": "4.12.0",

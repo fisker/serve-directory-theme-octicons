@@ -793,12 +793,12 @@
   resolved "https://registry.npm.taobao.org/@fisker/prettier-config/download/@fisker/prettier-config-1.0.17.tgz#1980baacb4627294859bbf60063e1796411e98c6"
   integrity sha1-GYC6rLRicpSFm79gBj4XlkEemMY=
 
-"@fisker/stylelint-config@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.npm.taobao.org/@fisker/stylelint-config/download/@fisker/stylelint-config-1.0.6.tgz#76ccf6c63294fad0fe389ed0ea6f35df49916464"
-  integrity sha1-dsz2xjKU+tD+OJ7Q6m8130mRZGQ=
+"@fisker/stylelint-config@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@fisker/stylelint-config/-/stylelint-config-1.0.7.tgz#79b1d35a99b2b3e96db5670f79cc965b125a1ce0"
+  integrity sha512-GuwfeVbggbohe96qxp9y28eVzBH7nHoZyJ3XJmFGrcyasD5zV5iZFLDWiVzU49fz0AfhArp4iD869qi+jCcGqw==
   dependencies:
-    stylelint-config-prettier "^5.1.0"
+    stylelint-config-prettier "^5.2.0"
     stylelint-config-recommended-scss "^3.3.0"
     stylelint-config-standard "^18.3.0"
     stylelint-scss "^3.6.1"
@@ -5505,10 +5505,10 @@ style-search@^0.1.0:
   resolved "https://registry.yarnpkg.com/style-search/-/style-search-0.1.0.tgz#7958c793e47e32e07d2b5cafe5c0bf8e12e77902"
   integrity sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=
 
-stylelint-config-prettier@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.npm.taobao.org/stylelint-config-prettier/download/stylelint-config-prettier-5.1.0.tgz#bbc21d4b0dc01c8d19c181c2cca68fb8dadb515b"
-  integrity sha1-u8IdSw3AHI0ZwYHCzKaPuNrbUVs=
+stylelint-config-prettier@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-5.2.0.tgz#b73d56a380662abd434ed745ca84db15e1a5aac6"
+  integrity sha512-ehrG/mBi9CTKkOBi0wlStX58+g9eGJhJW/jFEcCm/dUVHg9I2+T90k4tlyratvhlz876dyrTlor7gvDEaohVnA==
 
 stylelint-config-recommended-scss@^3.3.0:
   version "3.3.0"

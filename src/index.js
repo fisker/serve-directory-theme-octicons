@@ -33,9 +33,7 @@ function getIconName(file) {
 }
 
 function iconToCSS(icon) {
-  return `.file-icon_type_${icon}{background-image:url("${
-    asserts.icons[icon]
-  }")}`
+  return `.file-icon_type_${icon}{background-image:url("${asserts.icons[icon]}")}`
 }
 
 function getCSS(files) {

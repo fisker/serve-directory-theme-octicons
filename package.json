@@ -45,6 +45,7 @@
     "markdownlint-cli": "^0.17.0",
     "mini-svg-data-uri": "1.0.3",
     "node-sass": "4.12.0",
+    "npm-run-all": "^4.1.5",
     "octicons": "8.5.0",
     "prettier": "1.18.2",
     "stylelint": "^10.1.0",
@@ -52,14 +53,19 @@
   },
   "scripts": {
     "build": "cd scripts && sh build.sh",
-    "release": "run-s lint build prettier dist",
-    "lint": "run-p lint:*",
-    "lint:style": "stylelint **/*.{css,scss,less} --fix",
-    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
-    "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
-    "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "format:stylelint": "yarn lint:stylelint --fix",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
+    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "lint:style": "stylelint **/*.{css,scss,less} --fix",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "release": "run-s lint build format dist"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",

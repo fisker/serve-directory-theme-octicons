@@ -2,28 +2,62 @@
   "name": "serve-directory-theme-octicons",
   "version": "1.3.0",
   "description": "octicons theme for serve-directory.",
-  "main": "lib/index.js",
+  "keywords": [
+    "octicons",
+    "serve-directory",
+    "serve-directory-theme",
+    "theme"
+  ],
+  "homepage": "https://github.com/fisker/serve-directory-theme-octicons#readme",
+  "bugs": {
+    "url": "https://github.com/fisker/serve-directory-theme-octicons/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fisker/serve-directory-theme-octicons.git"
   },
-  "keywords": [
-    "serve-directory",
-    "theme",
-    "octicons",
-    "serve-directory-theme"
-  ],
+  "license": "MIT",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fisker/serve-directory-theme-octicons/issues"
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "run-s build:assets build:js",
+    "build:assets": "node -r esm ./scripts/build-assets.js",
+    "build:js": "rollup --config",
+    "clean": "run-p clean:*",
+    "clean:dist": "del-cli dist",
+    "dist": "run-p dist:*",
+    "dist:npm": "np --yolo --no-yarn",
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
+    "format:prettier": "yarn lint:prettier --write",
+    "format:stylelint": "yarn lint:stylelint --fix",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
+    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:package-json": "yarn run format:package-json --check",
+    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
+    "lint:style": "stylelint **/*.{css,scss,less} --fix",
+    "lint:stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "release": "run-s lint build format test dist",
+    "test": "echo \"wip\"",
+    "test-coverage": "echo \"wip\""
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
-    "lodash.uniq": "4.5.0",
     "pretty-bytes": "5.3.0"
   },
   "devDependencies": {
@@ -36,9 +70,12 @@
     "@fisker/lint-staged-config": "1.0.8",
     "@fisker/prettier-config": "1.0.24",
     "@fisker/stylelint-config": "1.1.19",
+    "@rollup/plugin-replace": "2.2.1",
     "babel-plugin-add-module-exports": "1.0.2",
     "cz-conventional-changelog": "3.0.2",
+    "del-cli": "3.0.0",
     "eslint": "6.7.2",
+    "esm": "3.2.25",
     "husky": "3.1.0",
     "json-stable-stringify": "1.0.1",
     "lint-staged": "9.5.0",
@@ -48,37 +85,14 @@
     "npm-run-all": "4.1.5",
     "octicons": "8.5.0",
     "prettier": "1.19.1",
+    "rollup": "1.27.8",
+    "sort-package-json": "1.30.0",
     "stylelint": "12.0.0",
-    "svgo": "1.3.2"
-  },
-  "scripts": {
-    "build": "cd scripts && sh build.sh",
-    "dist": "run-p dist:*",
-    "dist:npm": "np --yolo --no-yarn",
-    "format": "run-p format:*",
-    "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
-    "format:stylelint": "yarn lint:stylelint --fix",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
-    "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
-    "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
-    "lint:style": "stylelint **/*.{css,scss,less} --fix",
-    "lint:stylelint": "stylelint \"**/*.{css,scss,less}\"",
-    "release": "run-s lint build format dist"
+    "svgo": "1.3.2",
+    "write-prettier-file": "1.2.3"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
-  "files": [
-    "lib"
-  ],
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "homepage": "https://github.com/fisker/serve-directory-theme-octicons#readme",
-  "sideEffects": false
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

@@ -1,6 +1,5 @@
 import prettyBytes from 'pretty-bytes'
-import uniq from 'lodash.uniq'
-import asserts from './asserts.json'
+import assets from './assets'
 
 const RE_MEDIA = /^(?:image|video|audio)\/*/
 
@@ -33,17 +32,12 @@ function getIconName(file) {
 }
 
 function iconToCSS(icon) {
-  return `.file-icon_type_${icon}{background-image:url("${asserts.icons[icon]}")}`
+  return `.file-icon_type_${icon}{background-image:url("${assets.icons[icon]}")}`
 }
 
 function getCSS(files) {
-  let style = ''
-  style += asserts.css
-  style += uniq(files.map(getIconName))
-    .map(iconToCSS)
-    .join('')
-
-  return `<style>${style}</style>`
+  const iconStyle = [...new Set(files.map(getIconName))].map(iconToCSS).join('')
+  return `<style>${assets.css}${iconStyle}</style>`
 }
 
 export default {
@@ -55,7 +49,7 @@ export default {
   process: [
     {
       accept: 'text/html',
-      render: asserts.template,
+      render: assets.template,
     },
   ],
 }

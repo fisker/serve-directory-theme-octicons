@@ -12,10 +12,8 @@
   "bugs": {
     "url": "https://github.com/fisker/serve-directory-theme-octicons/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fisker/serve-directory-theme-octicons.git"
-  },
+  "repository": "fisker/serve-directory-theme-octicons",
+  "funding": "https://github.com/fisker/serve-directory-theme-octicons?sponsor=1",
   "license": "MIT",
   "author": {
     "name": "fisker Cheung",

@@ -32,7 +32,7 @@ async function getIcon(icon) {
 }
 
 function getIcons() {
-  const icons = Object.keys(iconMap).map(name => {
+  const icons = Object.keys(iconMap).map((name) => {
     const octiconName = iconMap[name]
     const content = octicons[octiconName].toSVG({
       fill: '#6a737d',

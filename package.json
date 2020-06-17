@@ -76,7 +76,7 @@
     "esm": "3.2.25",
     "husky": "4.2.5",
     "json-stable-stringify": "1.0.1",
-    "lint-staged": "10.2.10",
+    "lint-staged": "10.2.11",
     "markdownlint-cli": "0.23.1",
     "mini-svg-data-uri": "1.2.3",
     "node-sass": "4.14.1",

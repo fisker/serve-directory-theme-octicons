@@ -68,7 +68,7 @@
     "@fisker/lint-staged-config": "3.0.1",
     "@fisker/prettier-config": "4.0.1",
     "@fisker/stylelint-config": "2.3.2",
-    "@rollup/plugin-replace": "2.3.4",
+    "@rollup/plugin-replace": "2.4.1",
     "babel-plugin-add-module-exports": "1.0.4",
     "cz-conventional-changelog": "3.3.0",
     "del-cli": "3.0.1",

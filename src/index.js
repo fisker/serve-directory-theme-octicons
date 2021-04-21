@@ -1,4 +1,5 @@
 import prettyBytes from 'pretty-bytes'
+import dateTime from 'date-time'
 import assets from './assets'
 
 const RE_MEDIA = /^(?:image|video|audio)\/*/
@@ -45,6 +46,7 @@ export default {
     getIconName,
     getCSS,
     prettyBytes,
+    dateTime,
   },
   process: [
     {

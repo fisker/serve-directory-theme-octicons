@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import nodeSass from 'node-sass'
+import sass from 'sass'
 import writePrettierFile from 'write-prettier-file'
 import SVGO from 'svgo'
 import svgToMiniDataURI from 'mini-svg-data-uri'
@@ -51,7 +51,7 @@ function getIcons() {
 }
 
 ;(async () => {
-  const css = nodeSass
+  const css = sass
     .renderSync({
       file: path.join(__dirname, '../src/style.scss'),
       outputStyle: 'compressed',

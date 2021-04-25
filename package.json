@@ -86,7 +86,7 @@
     "rollup": "2.45.2",
     "sass": "1.32.11",
     "sort-package-json": "1.49.0",
-    "stylelint": "13.12.0",
+    "stylelint": "13.13.0",
     "svgo": "2.3.0",
     "write-prettier-file": "1.2.6"
   },

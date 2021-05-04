@@ -85,7 +85,7 @@
     "prettier": "2.2.1",
     "rollup": "2.45.2",
     "sass": "1.32.11",
-    "sort-package-json": "1.49.0",
+    "sort-package-json": "1.50.0",
     "stylelint": "13.12.0",
     "svgo": "2.3.0",
     "write-prettier-file": "1.2.6"

@@ -88,7 +88,7 @@
     "sort-package-json": "1.49.0",
     "stylelint": "13.12.0",
     "svgo": "2.3.0",
-    "write-prettier-file": "1.2.6"
+    "write-prettier-file": "2.0.0"
   },
   "publishConfig": {
     "access": "public",

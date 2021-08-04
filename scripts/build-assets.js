@@ -1,11 +1,13 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 import sass from 'sass'
 import writePrettierFile from 'write-prettier-file'
-import SVGO from 'svgo'
+import * as svgo from 'svgo'
 import svgToMiniDataURI from 'mini-svg-data-uri'
-
+import createEsmUtils from 'esm-utils'
 import octicons from 'octicons'
+
+const {__dirname} = createEsmUtils(import.meta)
 
 const CHARSET = 'utf-8'
 const iconMap = {
@@ -17,8 +19,6 @@ const iconMap = {
   symlink: 'file-symlink-file',
   file: 'file',
 }
-
-const svgo = new SVGO()
 
 async function getIcon(icon) {
   const result = await svgo.optimize(icon.content)
@@ -47,7 +47,7 @@ function getIcons() {
     }
   })
 
-  return Promise.all(icons.map(getIcon))
+  return Promise.all(icons.map((icon) => getIcon(icon)))
 }
 
 ;(async () => {
@@ -63,7 +63,6 @@ function getIcons() {
     .readFileSync(path.join(__dirname, '../src/directory.ejs'), CHARSET)
     .replace(/>\s*</g, '><')
 
-  // eslint-disable-next-line node/no-unsupported-features/es-builtins
   const icons = Object.fromEntries(
     (await getIcons())
       .map(({name, uri}) => [name, uri])

@@ -93,7 +93,7 @@
     "sort-package-json": "1.50.0",
     "stylelint": "13.13.1",
     "svgo": "2.4.0",
-    "write-prettier-file": "2.0.0"
+    "write-prettier-file": "2.1.0"
   },
   "publishConfig": {
     "access": "public",

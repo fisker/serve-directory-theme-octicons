@@ -66,7 +66,7 @@ function getIcons() {
   const icons = Object.fromEntries(
     (await getIcons())
       .map(({name, uri}) => [name, uri])
-      .sort(([name1], [name2]) => name1.localeCompare(name2))
+      .sort(([name1], [name2]) => name1.localeCompare(name2)),
   )
 
   await writePrettierFile(
@@ -75,6 +75,6 @@ function getIcons() {
       css,
       template,
       icons,
-    })}`
+    })}`,
   )
 })()

@@ -92,7 +92,7 @@
     "sass": "1.41.0",
     "sort-package-json": "1.51.0",
     "stylelint": "13.13.1",
-    "svgo": "2.5.0",
+    "svgo": "2.6.1",
     "write-prettier-file": "2.1.1"
   },
   "publishConfig": {

@@ -72,7 +72,7 @@
     "@fisker/eslint-config": "10.0.4",
     "@fisker/husky-config": "4.1.1",
     "@fisker/lint-staged-config": "3.1.4",
-    "@fisker/prettier-config": "5.0.3",
+    "@fisker/prettier-config": "5.0.4",
     "@fisker/stylelint-config": "5.0.10",
     "@rollup/plugin-replace": "3.0.0",
     "babel-plugin-add-module-exports": "1.0.4",

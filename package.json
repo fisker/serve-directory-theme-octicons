@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "date-time": "4.0.0",
-    "pretty-bytes": "5.6.0"
+    "pretty-bytes": "6.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.17.2",

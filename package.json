@@ -84,7 +84,7 @@
     "json-stable-stringify": "1.0.1",
     "lint-staged": "12.3.5",
     "markdownlint-cli": "0.31.1",
-    "mini-svg-data-uri": "1.4.3",
+    "mini-svg-data-uri": "1.4.4",
     "npm-run-all": "4.1.5",
     "octicons": "8.5.0",
     "prettier": "2.5.1",

@@ -9,7 +9,7 @@ import octicons from 'octicons'
 
 const {__dirname} = createEsmUtils(import.meta)
 
-const CHARSET = 'utf-8'
+const CHARSET = 'utf8'
 const iconMap = {
   directory: 'file-directory',
   media: 'file-media',

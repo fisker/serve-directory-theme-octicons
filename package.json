@@ -65,7 +65,7 @@
     "pretty-bytes": "6.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.19.1",
+    "@babel/core": "7.19.6",
     "@babel/preset-env": "7.19.1",
     "@commitlint/cli": "17.2.0",
     "@fisker/commitlint-config": "2.0.5",

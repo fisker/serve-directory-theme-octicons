@@ -81,7 +81,7 @@
     "eslint": "8.27.0",
     "esm-utils": "4.1.0",
     "husky": "8.0.3",
-    "json-stable-stringify": "1.0.2",
+    "json-stable-stringify": "1.1.1",
     "lint-staged": "13.0.3",
     "markdownlint-cli": "0.32.2",
     "mini-svg-data-uri": "1.4.4",
